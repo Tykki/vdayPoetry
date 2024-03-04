@@ -121,7 +121,7 @@
 
       }
       .c-mouse-vertical-carousel {
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
       }
       .u-a5 {
         font-family: Arial;

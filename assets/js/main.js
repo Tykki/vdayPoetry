@@ -67,6 +67,20 @@ class VerticalMouseDrivenCarousel {
 			},
 			false
 		);
+
+		this.getCarousel().addEventListener(
+			"touchmove",
+			(event) => {
+				this.posY = event.touches[0].pageY - this.getCarousel().offsetTop;
+				let offset = (-this.posY / carouselHeight) * listHeight;
+
+				TweenMax.to(this.getList(), 0.3, {
+					y: offset,
+					ease: Power4.easeOut
+				});
+			},
+			false
+		);
 	}
 
 	bgImgController() {
